@@ -51,7 +51,7 @@ function PatientList() {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "75px", padding: "10px" }}>
       <Card sx={{ minWidth: 275, height: 140, marginTop: 2 }}>
         <CardContent>
           <p style={pStyle}>

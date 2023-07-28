@@ -33,7 +33,7 @@ function ProfileBox() {
   };
 
   const spanStyle = {
-    paddingLeft: "95px",
+    paddingLeft: "75px",
     fontSize: "14px",
   };
 
@@ -66,7 +66,7 @@ function ProfileBox() {
   //   textAlign: "initial",
   // };
   return (
-    <div>
+    <div style={{ marginTop: "75px", padding: "10px" }}>
       <div className="Profile-box">
         <div className="Profile-box-container">
           <div className="Profile-box-spliter">
@@ -117,7 +117,7 @@ function ProfileBox() {
         <h4>Patient Information :</h4>
       </div>
 
-      <Accordian cardData={listItems}></Accordian>
+      <Accordian pageName={"Profile"} cardData={listItems}></Accordian>
     </div>
   );
 }

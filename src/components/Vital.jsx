@@ -47,14 +47,11 @@ function Vital() {
   };
 
   return (
-    <div>
-
-      <div style={{ paddingTop: "10px", paddingBottom: "10px" }}>
-        <h4>Vital:</h4>
-      </div>
+    <div style={{ marginTop: "75px", padding: "10px" }}>
+      <div style={{ paddingTop: "10px", paddingBottom: "10px" }}></div>
 
       <Accordian
-        pageName={"Patient"}
+        pageName={"Vital"}
         isHeader={false}
         cardData={listItems}
       ></Accordian>

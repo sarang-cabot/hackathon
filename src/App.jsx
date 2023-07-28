@@ -13,7 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/profile" element={<ProfileBox />} />
           <Route path="/PatientList" element={<PatientList />} />
-          <Route path="/Vital" element={<PatientList />} />
+          <Route path="/Vital" element={<Vital />} />
         </Route>
       </Routes>
     </BrowserRouter>

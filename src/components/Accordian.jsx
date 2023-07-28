@@ -66,7 +66,7 @@ export default function Accordian({ cardData, isHeader, pageName }) {
           </Card>
         ))}
 
-      {pageName !== "Patient" &&
+      {pageName == "Profile" &&
         cardData.map((data, index) => (
           <Card
             key={index}
@@ -105,12 +105,14 @@ export default function Accordian({ cardData, isHeader, pageName }) {
               background: "#E7F4FC",
             }}
           >
-            <CardContent style={{ display: "flex" }}>
-              <img
-                src={data.icon} // Replace this with the URL of the image you want to use
-                alt="Card"
-                style={{ width: "60px", marginRight: "10px", height: "40px" }}
-              />
+            <CardContent>
+              <Typography
+                style={{ marginTop: "10px" }}
+                variant="h6"
+                component="div"
+              >
+                {data.title}
+              </Typography>
               <Typography
                 style={{ marginTop: "10px" }}
                 variant="p"
