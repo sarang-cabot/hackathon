@@ -77,6 +77,15 @@ body {
   border-radius: 2px;
 }
 
+.Accordian-box {
+  width: 350px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 2px;
+}
+
 .Profile-box-container {
   width: 100%;
 }
