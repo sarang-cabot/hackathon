@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepPurple } from "@mui/material/colors";
+import {getParsedPatients} from "../get/data";
 
 const bull = (
   <Box
@@ -18,6 +19,7 @@ const bull = (
 );
 
 export default function Accordian({ cardData, isHeader, pageName }) {
+  console.log('getPatientList::', getParsedPatients());
   return (
     <div>
       {isHeader && (
