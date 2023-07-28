@@ -7,7 +7,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepPurple } from "@mui/material/colors";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { getParsedPatients } from "../get/data";
 
 const bull = (
   <Box
@@ -19,6 +20,14 @@ const bull = (
 );
 
 export default function Accordian({ cardData, isHeader, pageName }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const patients = getParsedPatients();
+  const id = searchParams.get("id");
+
+  const vitalData =
+    pageName == "Vital" ? patients.find((item) => item.id == id) : null;
+  console.log("vitalData::", vitalData);
   const navigate = useNavigate();
   return (
     <div>
@@ -57,7 +66,9 @@ export default function Accordian({ cardData, isHeader, pageName }) {
             onClick={() => navigate(`/profile?id=${data.id}`)}
           >
             <CardContent style={{ display: "flex" }}>
-              <Avatar sx={{ bgcolor: deepPurple[500] }}>{data.name.charAt(0) + data.name.charAt(1)}</Avatar>
+              <Avatar sx={{ bgcolor: deepPurple[500] }}>
+                {data.name.charAt(0) + data.name.charAt(1)}
+              </Avatar>
               <Typography
                 style={{ marginTop: "10px", paddingLeft: "5px" }}
                 variant="p"
@@ -79,6 +90,7 @@ export default function Accordian({ cardData, isHeader, pageName }) {
               marginBottom: "10px",
               background: "#E7F4FC",
             }}
+            onClick={() => navigate(`/Vital?id=${id}`)}
           >
             <CardContent style={{ display: "flex" }}>
               <img
@@ -98,7 +110,7 @@ export default function Accordian({ cardData, isHeader, pageName }) {
         ))}
 
       {pageName == "Vital" &&
-        cardData.map((data, index) => (
+        vitalData.observation.map((data, index) => (
           <Card
             key={index}
             sx={{ minWidth: 275 }}
@@ -117,20 +129,8 @@ export default function Accordian({ cardData, isHeader, pageName }) {
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
-                  <h6>12ssssssssssssssssssssss</h6>
-                  <h6> asd</h6>
-                </div>
-              </Typography>
-              <Typography
-                style={{ marginTop: "10px" }}
-                variant="p"
-                component="div"
-              >
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <h6>12ssssssssssssssssssssss</h6>
-                  <h6> asd</h6>
+                  <h6>{data.type}</h6>
+                  <h6> {data.value} {data.unit}</h6>
                 </div>
               </Typography>
             </CardContent>
