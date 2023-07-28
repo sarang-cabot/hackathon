@@ -1,19 +1,19 @@
 /* https://www.youtube.com/watch?v=NuYMMNK4wzA */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400&display=swap");
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-  font-family: 'Poppins', sans-serif;
-  width:100vw;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card {
+/* .card {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     padding: 30px;
     display: flex;
@@ -65,4 +65,44 @@ body{
 
 .card .links i:hover{
     color:rgb(29, 157, 189) ;
+} */
+
+.Profile-box {
+  width: 350px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed #333;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.Profile-box-container {
+  width: 100%;
+}
+
+.Profile-box-spliter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.Profile-box-spliter-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+.Profile-box-container p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: initial;
+  display: flex;
+  justify-content: space-between;
+}
+
+.HeaderStyle {
+  font-size: 16px;
+  text-align: initial;
 }
