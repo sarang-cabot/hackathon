@@ -54,7 +54,7 @@ function Vital() {
       </div>
 
       <Accordian
-        pageName={"Patient"}
+        pageName={"Vital"}
         isHeader={false}
         cardData={listItems}
       ></Accordian>
