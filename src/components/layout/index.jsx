@@ -13,11 +13,12 @@ function Layout() {
           width: "100%",
           height: "60px",
           backgroundColor: "#5697C6",
-          position: "absolute",
+          position: "sticky",
           top: 0,
           left: 0,
           display: "flex",
           alignItems: "center",
+          zIndex: 99,
         }}
       >
         <div style={{ color: "white", marginLeft: "10px" }}>
