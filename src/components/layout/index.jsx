@@ -8,7 +8,7 @@ function Layout() {
       <div
         style={{
           width: "100%",
-          height: "40px",
+          height: "60px",
           backgroundColor: "#5697C6",
           position: "absolute",
           top: 0,

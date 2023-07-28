@@ -72,7 +72,7 @@ body {
   height: 150px; */
   display: flex;
   flex-direction: row;
-  border: 1px dashed #5697c6;
+  border: 2px dashed #b2b2b2;
   padding: 20px;
   border-radius: 2px;
 }
