@@ -7,6 +7,9 @@ import { Box, CardActionArea } from "@mui/material";
 import "./ProfileBox.css";
 import Avatar from "@mui/material/Avatar";
 import Accordian from "./Accordian";
+import WifiCalling3Icon from "@mui/icons-material/WifiCalling3";
+import { red } from "@mui/material/colors";
+import { deepOrange, deepPurple } from "@mui/material/colors";
 
 function ProfileBox() {
   const divStyle = {
@@ -68,7 +71,7 @@ function ProfileBox() {
         <div className="Profile-box-container">
           <div className="Profile-box-spliter">
             <div style={{ padding: "5px" }}>
-              <Avatar>H</Avatar>
+              <Avatar sx={{ bgcolor: deepPurple[500] }}>JH</Avatar>
             </div>
             <div
               style={{
@@ -100,7 +103,12 @@ function ProfileBox() {
               </p>
             </div>
             <div style={{ paddingTop: "15px", paddingLeft: "80px" }}>
-              <Avatar>H</Avatar>
+              <Avatar sx={{ bgcolor: deepOrange[500] }}>
+                <WifiCalling3Icon></WifiCalling3Icon>
+              </Avatar>
+              {/* <Avatar>
+          
+              </Avatar> */}
             </div>
           </div>
         </div>

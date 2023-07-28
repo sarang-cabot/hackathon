@@ -20,10 +20,19 @@ export default function Accordian({ cardData }) {
     <div>
       <Card
         sx={{ minWidth: 275 }}
-        style={{ margin: "1px", paddingBottom: "10px", background: "#5697C6" }}
+        style={{
+          margin: "1px",
+          paddingBottom: "10px",
+          marginBottom: "5px",
+          background: "#5697C6",
+        }}
       >
         <CardContent>
-          <Typography variant="p" component="div" style={{ color: "white" }}>
+          <Typography
+            variant="p"
+            component="div"
+            style={{ color: "white", marginTop: "10px" }}
+          >
             Mother & Fetel Assessment
           </Typography>
         </CardContent>
@@ -32,7 +41,7 @@ export default function Accordian({ cardData }) {
         <Card
           key={index}
           sx={{ minWidth: 275 }}
-          style={{ margin: "5px", paddingBottom: "5px", background: "#E7F4FC" }}
+          style={{ margin: "5px", marginBottom: "10px", background: "#E7F4FC" }}
         >
           <CardContent style={{ display: "flex" }}>
             <img
