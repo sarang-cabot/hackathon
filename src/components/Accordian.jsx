@@ -113,14 +113,24 @@ export default function Accordian({ cardData, isHeader, pageName }) {
                 variant="h6"
                 component="div"
               >
-                {data.title}
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <h6>12ssssssssssssssssssssss</h6>
+                  <h6> asd</h6>
+                </div>
               </Typography>
               <Typography
                 style={{ marginTop: "10px" }}
                 variant="p"
                 component="div"
               >
-                {data.title}
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <h6>12ssssssssssssssssssssss</h6>
+                  <h6> asd</h6>
+                </div>
               </Typography>
             </CardContent>
           </Card>
