@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepPurple } from "@mui/material/colors";
-import {getParsedPatients} from "../get/data";
 
 const bull = (
   <Box
@@ -19,7 +18,6 @@ const bull = (
 );
 
 export default function Accordian({ cardData, isHeader, pageName }) {
-  console.log('getPatientList::', getParsedPatients());
   return (
     <div>
       {isHeader && (
@@ -56,13 +54,13 @@ export default function Accordian({ cardData, isHeader, pageName }) {
             }}
           >
             <CardContent style={{ display: "flex" }}>
-              <Avatar sx={{ bgcolor: deepPurple[500] }}>JH</Avatar>
+              <Avatar sx={{ bgcolor: deepPurple[500] }}>{data.name.charAt(0) + data.name.charAt(1)}</Avatar>
               <Typography
                 style={{ marginTop: "10px", paddingLeft: "5px" }}
                 variant="p"
                 component="div"
               >
-                {data.title}
+                {data.name}
               </Typography>
             </CardContent>
           </Card>

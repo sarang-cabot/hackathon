@@ -6,7 +6,11 @@ import Typography from "@mui/material/Typography";
 import { deepOrange, deepPurple } from "@mui/material/colors";
 import Accordian from "./Accordian";
 import Avatar from "@mui/material/Avatar";
+import { getParsedPatients } from "./../get/data";
+
 function PatientList() {
+  const patients = getParsedPatients();
+  console.log('patients::', patients);
   const listItems = [
     {
       title: "Present Pregnancy",
@@ -32,7 +36,7 @@ function PatientList() {
     textAlign: "initial",
     display: "flex",
     justifyContent: "space-between",
-    marginBottom:'10px'
+    marginBottom: "10px",
   };
 
   //     font-size: 14px;
@@ -51,7 +55,7 @@ function PatientList() {
       <Card sx={{ minWidth: 275, height: 140, marginTop: 2 }}>
         <CardContent>
           <p style={pStyle}>
-            Patient Count : <span style={spanStyle}>15</span>
+            Patient Count : <span style={spanStyle}>{patients.length}</span>
           </p>
           <p style={pStyle}>
             High Risk : <span style={spanStyle}>2</span>
@@ -66,7 +70,11 @@ function PatientList() {
         <h4>Patient List :</h4>
       </div>
 
-      <Accordian pageName={'Patient'} isHeader={false} cardData={listItems}></Accordian>
+      <Accordian
+        pageName={"Patient"}
+        isHeader={false}
+        cardData={patients}
+      ></Accordian>
     </div>
   );
 }
