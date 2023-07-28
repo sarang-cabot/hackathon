@@ -5,6 +5,7 @@ import Layout from "./components/layout/index";
 import PatientList from "./components/PatientList";
 import Vital from "./components/Vital";
 function App() {
+  console.log("data1::", getPatientList());
   return (
     <BrowserRouter>
       <Routes>

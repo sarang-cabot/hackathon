@@ -1,5 +1,8 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function Layout() {
   const location = useLocation();
 
@@ -18,7 +21,7 @@ function Layout() {
         }}
       >
         <div style={{ color: "white", marginLeft: "10px" }}>
-          {location.pathname.replace("/", "")}
+          {capitalizeFirstLetter(location.pathname.replace("/", ""))}
         </div>
       </div>
       <Outlet />
