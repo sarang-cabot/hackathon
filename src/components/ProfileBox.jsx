@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Box, CardActionArea } from "@mui/material";
 import "./ProfileBox.css";
 import Avatar from "@mui/material/Avatar";
+import Accordian from "./Accordian";
 
 function ProfileBox() {
   const divStyle = {
@@ -37,6 +38,25 @@ function ProfileBox() {
     paddingLeft: "25px",
     fontSize: "14px",
   };
+
+  const listItems = [
+    {
+      title: "Present Pregnancy",
+      icon: "/image1.svg",
+    },
+    {
+      title: "Patient Vitals",
+      icon: "/image2.svg",
+    },
+    {
+      title: "Antenatal Profile",
+      icon: "/image3.svg",
+    },
+    {
+      title: "Weight Monitoring Chart",
+      icon: "/image4.svg",
+    },
+  ];
   // const pStyle = {
   //   fontSize: "14px",
   //   fontWeight: "bold",
@@ -85,6 +105,11 @@ function ProfileBox() {
           </div>
         </div>
       </div>
+      <div style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+        <h4>Patient Information :</h4>
+      </div>
+
+      <Accordian cardData={listItems}></Accordian>
     </div>
   );
 }
