@@ -32,7 +32,7 @@ function PatientList() {
     textAlign: "initial",
     display: "flex",
     justifyContent: "space-between",
-    marginBottom:'10px'
+    marginBottom: "10px",
   };
 
   //     font-size: 14px;
@@ -47,7 +47,7 @@ function PatientList() {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "75px", padding: "10px" }}>
       <Card sx={{ minWidth: 275, height: 140, marginTop: 2 }}>
         <CardContent>
           <p style={pStyle}>
@@ -66,7 +66,11 @@ function PatientList() {
         <h4>Patient List :</h4>
       </div>
 
-      <Accordian pageName={'Patient'} isHeader={false} cardData={listItems}></Accordian>
+      <Accordian
+        pageName={"Patient"}
+        isHeader={false}
+        cardData={listItems}
+      ></Accordian>
     </div>
   );
 }
