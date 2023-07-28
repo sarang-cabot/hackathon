@@ -4,6 +4,7 @@ import Home from "./components/home/index";
 import Layout from "./components/layout/index";
 import PatientList from "./components/PatientList";
 import Vital from "./components/Vital";
+import {getPatientList} from "./get/data";
 function App() {
   console.log("data1::", getPatientList());
   return (
