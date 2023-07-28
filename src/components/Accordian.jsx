@@ -34,13 +34,17 @@ export default function Accordian({ cardData }) {
           sx={{ minWidth: 275 }}
           style={{ margin: "5px", paddingBottom: "5px", background: "#E7F4FC" }}
         >
-          <CardContent>
+          <CardContent style={{ display: "flex" }}>
             <img
-              src="./image1.svg" // Replace this with the URL of the image you want to use
+              src={data.icon} // Replace this with the URL of the image you want to use
               alt="Card"
-              style={{ width: "100px", marginRight: "10px" }}
+              style={{ width: "60px", marginRight: "10px", height: "40px" }}
             />
-            <Typography variant="p" component="div">
+            <Typography
+              style={{ marginTop: "10px" }}
+              variant="p"
+              component="div"
+            >
               {data.title}
             </Typography>
           </CardContent>

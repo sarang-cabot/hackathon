@@ -42,19 +42,19 @@ function ProfileBox() {
   const listItems = [
     {
       title: "Present Pregnancy",
-      imageUrl: "../assets/image 1.svg",
+      icon: "/image1.svg",
     },
     {
       title: "Patient Vitals",
-      icon: "",
+      icon: "/image2.svg",
     },
     {
       title: "Antenatal Profile",
-      icon: "",
+      icon: "/image3.svg",
     },
     {
       title: "Weight Monitoring Chart",
-      icon: "",
+      icon: "/image4.svg",
     },
   ];
   // const pStyle = {
