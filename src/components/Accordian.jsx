@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepPurple } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 
 const bull = (
   <Box
@@ -18,6 +19,7 @@ const bull = (
 );
 
 export default function Accordian({ cardData, isHeader, pageName }) {
+  const navigate = useNavigate();
   return (
     <div>
       {isHeader && (
@@ -52,6 +54,7 @@ export default function Accordian({ cardData, isHeader, pageName }) {
               marginBottom: "10px",
               background: "#E7F4FC",
             }}
+            onClick={() => navigate(`/profile?id=${data.id}`)}
           >
             <CardContent style={{ display: "flex" }}>
               <Avatar sx={{ bgcolor: deepPurple[500] }}>{data.name.charAt(0) + data.name.charAt(1)}</Avatar>

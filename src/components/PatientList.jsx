@@ -8,9 +8,11 @@ import Accordian from "./Accordian";
 import Avatar from "@mui/material/Avatar";
 import { getParsedPatients } from "./../get/data";
 
+
 function PatientList() {
   const patients = getParsedPatients();
   console.log('patients::', patients);
+
   const listItems = [
     {
       title: "Present Pregnancy",
