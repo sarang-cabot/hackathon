@@ -10,8 +10,16 @@ import Accordian from "./Accordian";
 import WifiCalling3Icon from "@mui/icons-material/WifiCalling3";
 import { red } from "@mui/material/colors";
 import { deepOrange, deepPurple } from "@mui/material/colors";
+import { useSearchParams } from "react-router-dom";
+import { getParsedPatients } from "../get/data";
 
 function ProfileBox() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  
+  const patients = getParsedPatients();
+  const  id  = searchParams.get("id");
+  const patient = patients.find((item) => item.id == id);
+  console.log("patients::", patient);
   const divStyle = {
     border: "2px solid #333",
     padding: "20px",
@@ -71,7 +79,7 @@ function ProfileBox() {
         <div className="Profile-box-container">
           <div className="Profile-box-spliter">
             <div style={{ padding: "5px" }}>
-              <Avatar sx={{ bgcolor: deepPurple[500] }}>JH</Avatar>
+              <Avatar sx={{ bgcolor: deepPurple[500] }}>{patient.name.charAt(0)}</Avatar>
             </div>
             <div
               style={{
@@ -79,10 +87,10 @@ function ProfileBox() {
               }}
             >
               <p>
-                Client Name : <span style={spanStyle}>Jhon Paul</span>
+                Client Name : <span style={spanStyle}>{patient.name}</span>
               </p>
               <p>
-                Patient Id : <span style={spanStyle}>CFH85546</span>
+                Patient Id : <span style={spanStyle}>{patient.id.split('-')[2]}</span>
               </p>
 
               <p>
@@ -95,11 +103,11 @@ function ProfileBox() {
             <div>
               <h5 className="HeaderStyle">Patient Contact</h5>
               <p style={pStyle}>
-                Patient Id : <span style={spanBottomStyle}>CFH85546</span>
+                State: <span style={spanBottomStyle}>{patient.state}</span>
               </p>
 
               <p style={pStyle}>
-                Age : <span style={spanBottomStyle}>27</span>
+                City : <span style={spanBottomStyle}>{patient.city}</span>
               </p>
             </div>
             <div style={{ paddingTop: "15px", paddingLeft: "80px" }}>
