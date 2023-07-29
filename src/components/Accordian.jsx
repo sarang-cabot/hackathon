@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar";
 import { deepOrange, deepPurple } from "@mui/material/colors";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { getParsedPatients } from "../get/data";
-
+import Badge from "@mui/material/Badge";
 const bull = (
   <Box
     component="span"
@@ -66,9 +66,11 @@ export default function Accordian({ cardData, isHeader, pageName }) {
             onClick={() => navigate(`/profile?id=${data.id}`)}
           >
             <CardContent style={{ display: "flex" }}>
-              <Avatar sx={{ bgcolor: deepPurple[500] }}>
-                {data.name.charAt(0) + data.name.charAt(1)}
-              </Avatar>
+              <Badge color="primary" variant="circular" badgeContent={2} invisible={index !== 1 && index !== 3}>
+                <Avatar sx={{ bgcolor: deepPurple[500] }}>
+                  {data.name.charAt(0) + data.name.charAt(1)}
+                </Avatar>
+              </Badge>
               <Typography
                 style={{ marginTop: "10px", paddingLeft: "5px" }}
                 variant="p"
@@ -130,7 +132,10 @@ export default function Accordian({ cardData, isHeader, pageName }) {
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <h6>{data.type}</h6>
-                  <h6> {data.value} {data.unit}</h6>
+                  <h6>
+                    {" "}
+                    {data.value} {data.unit}
+                  </h6>
                 </div>
               </Typography>
             </CardContent>
